@@ -1,4 +1,4 @@
-ALGORITHM sentence count
+ALGORITHM sentence_count
 VAR
     str : STRING;
     c : char;
