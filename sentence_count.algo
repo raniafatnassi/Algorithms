@@ -1,0 +1,30 @@
+ALGORITHM algorithm_name
+VAR
+    str : STRING;
+    c : char;
+    i : INTEGER;
+    char_num : INTEGER = 0;
+    word_num : INTEGER = 1;
+    vowel_num : INTEGER 0 ;
+BEGIN
+    
+    Read(str);
+    IF (str[length(str)-1] == "." OR length(str)>0) THEN
+        FOR i FROM 0 TO length(str)-1 STEP 1  DO
+            c = str[i];
+            IF (c!= '' AND c!='.') THEN
+                char_num := char_num + 1;
+                IF (lowercase(c) = 'a' OR lowercase(c) = 'e' OR lowercase(c) = 'o' OR lowercase(c) = 'u') THEN
+                    vowel_num := vowel_num + 1;
+                END_IF
+            ELSE
+                word_num := word_num + 1;
+            END_IF
+        END_FOR
+    
+    
+    ELSE
+        Write("Invalid Sentence!")
+    END_IF
+    
+END
