@@ -27,4 +27,11 @@ BEGIN
         Write("Invalid Sentence!")
     END_IF
     
+    Write("Number of characters: ");
+    Write(char_num);
+    Write("Number of numbers: ");
+    Write(vowel_num);
+    Write("Number of words: ");
+    Write(word_num);
+    
 END
