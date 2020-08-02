@@ -9,12 +9,13 @@ VAR
 BEGIN
     
     Read(str);
+    str := ToUpper(str);
     IF (str[str.length-1] == "." OR str.length>0) THEN
         FOR i FROM 0 TO str.length-1 STEP 1  DO
             c = str[i];
             IF (c!= '' AND c!='.') THEN
                 char_num := char_num + 1;
-                IF (lowercase(c) = 'a' OR lowercase(c) = 'e' OR lowercase(c) = 'o' OR lowercase(c) = 'u') THEN
+                IF (c = 'A' OR c = 'E' OR c = 'E' OR c = 'U') THEN
                     vowel_num := vowel_num + 1;
                 END_IF
             ELSE
